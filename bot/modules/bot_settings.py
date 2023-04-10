@@ -466,7 +466,7 @@ def load_config():
 
     FSUB_IDS = environ.get('FSUB_IDS', '')
     if len(FSUB_IDS) == 0:
-        FSUB_IDS = '-1001951208156 -1001929953143'
+        FSUB_IDS = ''
 
     PAID_SERVICE = environ.get('PAID_SERVICE', '')
     PAID_SERVICE = PAID_SERVICE.lower() == 'true'
