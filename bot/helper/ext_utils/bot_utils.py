@@ -232,10 +232,7 @@ def get_readable_message():
                 globals()['COUNT'] -= STATUS_LIMIT
                 globals()['PAGE_NO'] -= 1
         for index, download in enumerate(list(download_dict.values())[COUNT:], start=1):
-            if download.message.from_user.username:
-               msg += f"<b>╭ <a href='https://t.me/{download.message.from_user.username}'>{download.status()}</a>: </b>"
-            else:
-               msg += f"<b>╭ <a href='tg://user?id={download.message.from_user.id}'>{download.status()}</a>: </b>"
+            msg += f"<b>╭ <a href='{download.message.link}'>{download.status()}</a>: </b>"
             msg += f"<code>{escape(str(download.name()))}</code>"
             if download.status() not in [MirrorStatus.STATUS_SEEDING, MirrorStatus.STATUS_SPLITTING, MirrorStatus.STATUS_CONVERTING, MirrorStatus.STATUS_QUEUEDL, MirrorStatus.STATUS_QUEUEUP]:
                 msg += f"\n<b>├ </b>[{get_progress_bar_string(download)}] {download.progress()}"
@@ -254,15 +251,13 @@ def get_readable_message():
                         pass
                 if download.message.chat.type != 'private':
                     try:
-                        if download.message.from_user.username:
-                           msg += f'\n<b>├ Source: </b><a href="https://t.me/{download.message.from_user.username}">{download.message.from_user.first_name}</a>'
-                        else:
-                           msg += f'\n<b>├ Source: </b><a href="tg://user?id={download.message.from_user.id}">{download.message.from_user.first_name}</a>'
+                        chatid = str(download.message.chat.id)[4:]
+                        msg += f'\n<b>├ Source: </b><a href="https://t.me/c/{chatid}/{download.message.message_id}">{download.message.from_user.first_name}</a> | <b>Id :</b> <code>{download.message.from_user.id}</code>'
                         msg += f"\n<b>╰ </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"                 
                     except:
                         pass
                 else:
-                    msg += f'\n<b>├ User:</b> ️<code>{download.message.from_user.first_name}</code>'
+                    msg += f'\n<b>├👤 User:</b> ️<code>{download.message.from_user.first_name}</code> | <b>Id:</b> <code>{download.message.from_user.id}</code>'
                     msg += f"\n<b>╰ </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
 
             elif download.status() == MirrorStatus.STATUS_SEEDING:
