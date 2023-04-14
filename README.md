@@ -2,6 +2,8 @@
   
   [Support Group](https://t.me/tleechlog)
 
+#Delete readme.md for railway
+
 Instructions for Heroku
 ---------------------
 1. Go to settings, add action secrets with correct value.
