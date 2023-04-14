@@ -2,7 +2,7 @@
   
   [Support Group](https://t.me/tleechlog)
 
-#Delete readme.md for railway
+# Delete readme.md for railway
 
 Instructions for Heroku
 ---------------------
