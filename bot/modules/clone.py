@@ -25,13 +25,12 @@ from telegram.ext import CallbackQueryHandler, CommandHandler
 def _clone(message, bot):
     user_id = message.from_user.id
     buttons = ButtonMaker()
-    if not isAdmin(message):
-        if message.from_user.username:
-            tag = f"@{message.from_user.username}"
-        else:
-            tag = message.from_user.mention_html(message.from_user.first_name)
-        if forcesub(bot, message, tag):
-            return
+    if message.from_user.username:
+         tag = f"@{message.from_user.username}"
+    else:
+          tag = message.from_user.mention_html(message.from_user.first_name)
+    if forcesub(bot, message, tag):
+          return
             
     if get_bot_pm(user_id) and message.chat.type != 'private':
         try:
