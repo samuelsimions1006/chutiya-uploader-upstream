@@ -34,14 +34,14 @@ default_values = {'AUTO_DELETE_MESSAGE_DURATION': 60,
                   'TG_SPLIT_SIZE': tgBotMaxFileSize,
                   'TGH_THUMB': 'https://telegra.ph/file/086ed00c5b975595d0eb4.jpg',
                   'START_BTN1_NAME': 'Repo',
-                  'START_BTN1_URL': 'https://github.com/killerlearner',
+                  'START_BTN1_URL': 'https://github.com/',
                   'START_BTN2_NAME': 'Support Group',
-                  'START_BTN2_URL': 'https://t.me/tleechlog',
-                  'AUTHOR_NAME': 'Killerlearner',
-                  'AUTHOR_URL': 'https://t.me/killerlearner',
-                  'TITLE_NAME': 'Killerlearner',
-                  'GD_INFO': 'Uploaded by Gdrive Uploader',
-                  'CREDIT_NAME': 'killerlearner',
+                  'START_BTN2_URL': 'https://t.me/arca8e',
+                  'AUTHOR_NAME': 'Harsh',
+                  'AUTHOR_URL': 'https://t.me/arca8e',
+                  'TITLE_NAME': 'Harsh Mirror Bot',
+                  'GD_INFO': 'Uploaded by Harsh Mirror Uploader',
+                  'CREDIT_NAME': 'Harsh',
                   'NAME_FONT': 'code',
                   'CAPTION_FONT': 'code',
                   'FINISHED_PROGRESS_STR': '●',
@@ -478,13 +478,13 @@ def load_config():
     START_BTN1_URL = environ.get('START_BTN1_URL', '')
     if len(START_BTN1_NAME) == 0 or len(START_BTN1_URL) == 0:   
         START_BTN1_NAME = 'Master'
-        START_BTN1_URL = 'https://t.me/killerlearner'
+        START_BTN1_URL = 'https://t.me/arca8e'
 
     START_BTN2_NAME = environ.get('START_BTN2_NAME', '')
     START_BTN2_URL = environ.get('START_BTN2_URL', '')
     if len(START_BTN2_NAME) == 0 or len(START_BTN2_URL) == 0:   
         START_BTN2_NAME = 'Support Group'
-        START_BTN2_URL = 'https://t.me/killerlearner'
+        START_BTN2_URL = 'https://t.me/arca8e'
 
     SHORTENER = environ.get('SHORTENER', '')
     SHORTENER_API = environ.get('SHORTENER_API', '')
@@ -544,7 +544,7 @@ def load_config():
 
     AUTHOR_URL = environ.get('AUTHOR_URL', '')
     if len(AUTHOR_URL) == 0:    
-        AUTHOR_URL = 'https://t.me/killerlearner'
+        AUTHOR_URL = 'https://t.me/arca8e'
 
     TITLE_NAME = environ.get('TITLE_NAME', '')
     if len(TITLE_NAME) == 0:    
@@ -556,7 +556,7 @@ def load_config():
 
     CREDIT_NAME = environ.get('CREDIT_NAME', '')
     if len(CREDIT_NAME) == 0:   
-        CREDIT_NAME = 'killerlearner'
+        CREDIT_NAME = 'Harsh'
 
     NAME_FONT = environ.get('NAME_FONT', '')
     if len(NAME_FONT) == 0: 
