@@ -166,7 +166,7 @@ def log(update, context):
 
 
 help_string = '''
-<b><a href='https://github.com/killerlearner'>Killerlearner</a></b> - The Ultimate Telegram MIrror-Leech Bot to Upload Your File & Link in Google Drive & Telegram
+<b><a href='https://github.com/arca8e'>Harsh Mirror Bot</a></b> - A Simple Google Drive Uploader
 Choose a help category:
 '''
 
